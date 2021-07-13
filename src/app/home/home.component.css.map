@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,QAAQ,CAAC;EACL,UAAU,EAAE,oLAAoL,CAAC,SAAS,CAAC,MAAM,CAAC,MAAM,CAAC,KAAK;EAC9N,uBAAuB,EAAE,KAAK;EAC9B,oBAAoB,EAAE,KAAK;EAC3B,kBAAkB,EAAE,KAAK;EACzB,eAAe,EAAE,KAAK;CAAG;;AAE7B,AAAA,KAAK,CAAC;EACJ,WAAW,EAAE,KAAK;EAClB,cAAc,EAAE,KAAK;CAAG",
+    "sources": [
+        "home.component.sass"
+    ],
+    "names": [],
+    "file": "home.component.css"
+}

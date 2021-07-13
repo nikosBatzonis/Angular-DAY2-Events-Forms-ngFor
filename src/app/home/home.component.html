@@ -1,0 +1,18 @@
+<div class="backCol">
+    <div class="container marketing animate__animated animate__bounceInLeft" style="margin-top: 5vh">
+        <div class="row down d-flex">
+            <div class="col col-8 col-md-6 col-lg-3 d-flex justify-content-around" *ngFor="let val of cars">
+                <div class="card" style="width: 18rem">
+                    <img src="{{ val.image }}" class="card-img-top" alt="{{ val.marke }}" />
+                    <div class="card-body" [style.background-color]="'rgb(5,58,114)'">
+                        <h5 class="card-title">Marke: {{ val.marke }}</h5>
+                        <h5 class="card-title">Model: {{ val.model }}</h5>
+                        <h5 class="card-title">Petrol:{{ val.petrol }}</h5>
+                        <h5 class="card-title">Year:{{ val.year }}</h5>
+                        <a href="#" class="btn btn-primary">More Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
