@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'home',
@@ -6,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.sass'],
 })
 export class HomeComponent implements OnInit {
+  info = new FormGroup({
+    image: new FormControl('', Validators.required),
+    marke: new FormControl('', Validators.required),
+    model: new FormControl('', Validators.required),
+    petrol: new FormControl('', Validators.required),
+    year: new FormControl('', Validators.required),
+  });
   cars = [
     {
       marke: 'BMW',
@@ -43,4 +51,12 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+  clearForm() {}
+  onSubmit() {
+    if (this.info.valid) {
+      var a = this.info.value;
+      this.cars.push(a);
+      this.info.reset();
+    }
+  }
 }

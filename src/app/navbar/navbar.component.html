@@ -12,8 +12,26 @@
                 <li class="nav-item">
                     <a class="nav-link active" routerLink="contact-us">{{ contactUs }}</a>
                 </li>
+                <li style="color: green; font-weight: bold" class="nav-item d-flex text-center align-items-center">
+                    <ng-template [ngIf]="clickCount >= 200">
+                        <p class="fs-6" [ngStyle]="{
+                'background-color': clickCount >= 200 ? 'lightgreen' : 'none'
+              }">
+                            You are VIP
+                        </p>
+                    </ng-template>
+                </li>
             </ul>
-            <div>
+
+            <label class="" for=""> You have donated:</label>
+
+            <div class="m-2">{{ clickCount }}</div>
+
+            <button class="btn btn-outline-success" (click)="countClick()">
+        Donate 10€
+      </button>
+
+            <!-- <div>
                 <h1 class="vip mx-3" *ngIf="clickCount >= 50">VIP</h1>
             </div>
 
@@ -23,7 +41,7 @@
         </button>
 
                 <input type="test " value="{{ clickCount }}€ " />
-            </div>
+            </div> -->
         </div>
     </div>
 </nav>
